@@ -1,3 +1,5 @@
+//Huzaifa Hashim
+//Computer Graphics HW1
 // Camera Abstract Interface class
 // Written by Sergey Kosov in 2005 for Rendering Competition
 #pragma once
@@ -18,7 +20,7 @@ public:
 	ICamera(const ICamera&) = delete;
 	virtual ~ICamera(void) = default;
 	const ICamera& operator=(const ICamera&) = delete;
-	
+
 	/**
 	 * @brief Initializes the ray
 	 * @details This function initializes the ray pointing from the camera origin to the pixel
@@ -30,14 +32,14 @@ public:
 	 * @retval false otherwise
 	 */
 	virtual bool InitRay(float x, float y, Ray& ray) = 0;
-	
+
 	/**
 	 * @brief Retuns the camera resolution
 	 * @return The camera resolution
 	 */
 	Size getResolution(void) const { return m_resolution; }
-	
-	
+
+
 private:
 	Size m_resolution;	///< Camera resolution
 };
